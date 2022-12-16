@@ -39,12 +39,8 @@ func (cs *CustomerServiceImpl) RegisterCustomer(customerRegister *model.Customer
 		fmt.Println(err)
 		panic(err)
 	}
-	
-	token, err := customer.GenerateJWT()
-	if err != nil {
-		return "", err
-	}
-	return token, nil
+	successRegist := "Success Register Account with email: " + customer.Email
+	return successRegist, nil
 }
 
 func (cs *CustomerServiceImpl) LoginCustomer(customerLogin *model.CustomerLogin) (string, error) {

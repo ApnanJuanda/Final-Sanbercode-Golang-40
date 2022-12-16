@@ -27,7 +27,7 @@ func (cc *CustomerControllerImpl) RegisterCustomer(ctx *gin.Context) {
 		return
 	}
 
-	token, err := cc.customerService.RegisterCustomer(&customerRegister)
+	result, err := cc.customerService.RegisterCustomer(&customerRegister)
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{
 			"message": err.Error(),
@@ -35,7 +35,7 @@ func (cc *CustomerControllerImpl) RegisterCustomer(ctx *gin.Context) {
 		return
 	}
 	ctx.JSON(http.StatusCreated, gin.H{
-		"token": token,
+		"result": result,
 	})
 }
 
