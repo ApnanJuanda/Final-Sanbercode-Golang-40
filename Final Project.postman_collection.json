@@ -1,0 +1,3284 @@
+{
+	"info": {
+		"_postman_id": "aa05595c-60a5-43a3-a754-1d44c70aeb2f",
+		"name": "Electronics Component Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12118444"
+	},
+	"item": [
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "Add Supplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mRobot\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/suppliers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Succes Add Supplier",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"mRobot\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/suppliers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 22:56:19 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "108"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"mRobot\",\n    \"created_at\": \"2022-12-14T22:56:21.02466Z\",\n    \"updated_at\": \"2022-12-14T22:56:21.02466Z\"\n}"
+						},
+						{
+							"name": "Failed Add Supplier",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/suppliers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 23:03:28 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"invalid request body\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Suppliers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/suppliers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get All Suppliers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/suppliers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"suppliers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 23:04:47 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "225"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"mRobot\",\n        \"created_at\": \"2022-12-14T22:56:21.02466Z\",\n        \"updated_at\": \"2022-12-14T22:56:21.02466Z\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"electrixen\",\n        \"created_at\": \"2022-12-14T23:04:35.318773Z\",\n        \"updated_at\": \"2022-12-14T23:04:35.318773Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Supplier By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/suppliers/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"suppliers",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get Supplier By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/suppliers/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"suppliers",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 23:12:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"electrixen\",\n    \"created_at\": \"2022-12-14T23:04:35.318773Z\",\n    \"updated_at\": \"2022-12-14T23:04:35.318773Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Supplier By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mRobot v2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/suppliers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"suppliers",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Update Supplier By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"mRobot v2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/suppliers/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"suppliers",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 23:20:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Updated data amount 1\"\n}"
+						},
+						{
+							"name": "Failed Update Supplier By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"mRobot v2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/suppliers/5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"suppliers",
+										"5"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 23:21:08 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"could not update the category, please try again after sometime\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Supplier By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/suppliers/8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"suppliers",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Delete Supplier By Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/suppliers/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"suppliers",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 23:27:45 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted data amount 1\"\n}"
+						},
+						{
+							"name": "Failed Delete Supplier By Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/suppliers/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"suppliers",
+										"3"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 14 Dec 2022 23:28:16 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"could not delete the supplier, there might be no data for ID 8\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"capasitor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Add Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"capasitor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 00:21:15 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"capasitor\",\n    \"created_at\": \"2022-12-15T00:21:17.143834Z\",\n    \"updated_at\": \"2022-12-15T00:21:17.143834Z\"\n}"
+						},
+						{
+							"name": "Failed Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 00:22:08 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"invalid request body\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 00:23:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "224"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"capasitor\",\n        \"created_at\": \"2022-12-15T00:21:17.143834Z\",\n        \"updated_at\": \"2022-12-15T00:21:17.143834Z\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"test\",\n        \"created_at\": \"2022-12-15T00:21:59.154835Z\",\n        \"updated_at\": \"2022-12-15T00:21:59.154835Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Category By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get Category By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/categories/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 00:23:59 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"capasitor\",\n    \"created_at\": \"2022-12-15T00:21:17.143834Z\",\n    \"updated_at\": \"2022-12-15T00:21:17.143834Z\"\n}"
+						},
+						{
+							"name": "Failed Get Category By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/categories/8",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"8"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 00:24:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test v2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/categories/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Update Category By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test v2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 00:25:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Updated data amount 1\"\n}"
+						},
+						{
+							"name": "Failed Update Category By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test v2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/categories/8",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"8"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 00:26:22 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"could not update the category, please try again after sometime\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/categories/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Delete Category By Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/categories/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 00:27:02 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted data amount 1\"\n}"
+						},
+						{
+							"name": "Failed Delete Category By Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/categories/8",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"categories",
+										"8"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 00:27:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"could not delete the category, there might be no data for ID 8\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Capasitor Mika\",\r\n    \"price\": 1000,\r\n    \"stock_product\": 5,\r\n    \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\r\n    \"supplier_id\": 1,\r\n    \"category_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Add Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Capasitor Mika\",\r\n    \"price\": 1000,\r\n    \"stock_product\": 5,\r\n    \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\r\n    \"supplier_id\": 1,\r\n    \"category_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 08:27:29 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "333"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Capasitor Mika\",\n    \"price\": 1000,\n    \"stock_product\": 5,\n    \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\n    \"created_at\": \"2022-12-15T08:27:30.757208Z\",\n    \"updated_at\": \"2022-12-15T08:27:30.757208Z\",\n    \"category_id\": 1,\n    \"supplier_id\": 1\n}"
+						},
+						{
+							"name": "Failed Add Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Capasitor Mika\",\r\n    \"price\": 1000,\r\n    \"stock_product\": 5,\r\n    \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\r\n    \"supplier_id\": 1,\r\n    \"category_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 08:25:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"category_id is not valid\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get All Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 09:02:08 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1008"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Capasitor Elektrolit\",\n        \"price\": 2000,\n        \"stock_product\": 5,\n        \"image_url\": \"https://i0.wp.com/ecs7.tokopedia.net/img/product-1/2015/5/8/12331927/12331927_54518ac4-f566-11e4-92cc-fa3d87772fba.jpg?resize=407%2C257&ssl=1\",\n        \"created_at\": \"2022-12-15T08:25:07.137383Z\",\n        \"updated_at\": \"2022-12-15T08:25:07.137383Z\",\n        \"category_id\": 1,\n        \"supplier_id\": 1\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Capasitor Mika\",\n        \"price\": 1000,\n        \"stock_product\": 5,\n        \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\n        \"created_at\": \"2022-12-15T08:27:30.757208Z\",\n        \"updated_at\": \"2022-12-15T08:27:30.757208Z\",\n        \"category_id\": 1,\n        \"supplier_id\": 1\n    },\n    {\n        \"id\": 3,\n        \"name\": \"test\",\n        \"price\": 1000,\n        \"stock_product\": 5,\n        \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\n        \"created_at\": \"2022-12-15T09:01:34.413967Z\",\n        \"updated_at\": \"2022-12-15T09:01:34.413967Z\",\n        \"category_id\": 1,\n        \"supplier_id\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get Product By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 09:03:50 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "348"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Capasitor Elektrolit\",\n    \"price\": 2000,\n    \"stock_product\": 5,\n    \"image_url\": \"https://i0.wp.com/ecs7.tokopedia.net/img/product-1/2015/5/8/12331927/12331927_54518ac4-f566-11e4-92cc-fa3d87772fba.jpg?resize=407%2C257&ssl=1\",\n    \"created_at\": \"2022-12-15T08:25:07.137383Z\",\n    \"updated_at\": \"2022-12-15T08:25:07.137383Z\",\n    \"category_id\": 1,\n    \"supplier_id\": 1\n}"
+						},
+						{
+							"name": "Failed Get Product By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products/10",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"10"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 09:04:09 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test update\",\r\n    \"price\": 1001,\r\n    \"stock_product\": 6,\r\n    \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\r\n    \"supplier_id\": 1,\r\n    \"category_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/products/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Update Product By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test update\",\r\n    \"price\": 1001,\r\n    \"stock_product\": 6,\r\n    \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\r\n    \"supplier_id\": 1,\r\n    \"category_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 09:07:29 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Updated data amount 1\"\n}"
+						},
+						{
+							"name": "Failed Update Product By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test update\",\r\n    \"price\": 1001,\r\n    \"stock_product\": 6,\r\n    \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\r\n    \"supplier_id\": 1,\r\n    \"category_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/products/30",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"30"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 09:08:01 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"could not update the product, please try again after sometime\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Delete Product By Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 09:08:47 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted data amount 1\"\n}"
+						},
+						{
+							"name": "Failed Delete Product By Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/products/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"products",
+										"3"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 09:09:01 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"could not delete the product, there might be no data for ID 30\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Customer Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customer/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customer",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Customer Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test\",\r\n    \"email\": \"test123@gmail.com\",\r\n    \"password\": \"@Test123\",\r\n    \"phone_number\": \"081212345678\",\r\n    \"address\": \"surabaya\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/customer/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 13:18:33 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "159"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzExOTY3MTMsImlzcyI6InNhbmJlcmNvZGUiLCJ1c2VyX2lkIjowfQ.mkyoX-yw83YPbWgH5F9GvAqJVtBW2NQo5xhX17pBPH8\"\n}"
+						},
+						{
+							"name": "Failed Customer Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test\",\r\n    \"email\": \"test123@gmail.com\",\r\n    \"password\": \"@Test123\",\r\n    \"phone_number\": \"081212345678\",\r\n    \"address\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/customer/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"register"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 13:20:45 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"address is required\"\n}"
+						},
+						{
+							"name": "Email has been Registered",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test 2\",\r\n    \"email\": \"apnan123@gmail.com\",\r\n    \"password\": \"@Test123\",\r\n    \"phone_number\": \"081212345678\",\r\n    \"address\": \"bandung\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/customer/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"register"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 14:39:47 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"email has been registered\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login Customer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"if(jsonData.token != null || jsonData.token != undefined) {\r",
+									"    postman.setEnvironmentVariable(\"userToken\",\"Bearer \"+ jsonData.token);\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"juanda123@gmail.com\",\r\n    \"password\": \"@Test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customer/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customer",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Login Customer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"apnan123@gmail.com\",\r\n    \"password\": \"@Test123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/customer/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 14:39:10 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "159"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzEyMDE1NTAsImlzcyI6InNhbmJlcmNvZGUiLCJ1c2VyX2lkIjo2fQ.Ch6Qv9fImoxKXwwjln5DHQ2WZQWF_YlA8YFb3IMsimU\"\n}"
+						},
+						{
+							"name": "Failed Login Customer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"apnan123@gmail.com\",\r\n    \"password\": \"@Test12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/customer/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"customer",
+										"login"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 14:45:05 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"invalid username or password\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Feedback",
+			"item": [
+				{
+					"name": "Add Feedback",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": 1,\r\n    \"review\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reviews",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Add Feedback",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": 1,\r\n    \"review\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reviews",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reviews"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:12:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"customer_id\": 7,\n    \"product_id\": 1,\n    \"review\": \"test\",\n    \"created_at\": \"2022-12-16T09:12:16.089616Z\",\n    \"updated_at\": \"2022-12-16T09:12:16.089616Z\"\n}"
+						},
+						{
+							"name": "Failed Add Feedback",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reviews",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reviews"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:14:25 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"review is required\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Feedbacks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": 1,\r\n    \"review\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reviews",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get All Feedbacks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": 1,\r\n    \"review\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reviews",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reviews"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:13:47 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "431"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"customer_id\": 6,\n        \"product_id\": 1,\n        \"review\": \"test\",\n        \"created_at\": \"2022-12-15T16:20:30.47509Z\",\n        \"updated_at\": \"2022-12-15T16:20:30.47509Z\"\n    },\n    {\n        \"id\": 3,\n        \"customer_id\": 6,\n        \"product_id\": 1,\n        \"review\": \"test\",\n        \"created_at\": \"2022-12-15T16:23:16.000188Z\",\n        \"updated_at\": \"2022-12-15T16:23:16.000188Z\"\n    },\n    {\n        \"id\": 4,\n        \"customer_id\": 7,\n        \"product_id\": 1,\n        \"review\": \"testupdate\",\n        \"created_at\": \"2022-12-16T09:12:16.089616Z\",\n        \"updated_at\": \"2022-12-16T09:12:47.422814Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Feedback By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": 1,\r\n    \"review\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reviews/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get Feedback By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": 1,\r\n    \"review\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reviews/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reviews",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:13:19 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"customer_id\": 7,\n    \"product_id\": 1,\n    \"review\": \"testupdate\",\n    \"created_at\": \"2022-12-16T09:12:16.089616Z\",\n    \"updated_at\": \"2022-12-16T09:12:47.422814Z\"\n}"
+						},
+						{
+							"name": "Failed Feedback By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": 1,\r\n    \"review\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reviews/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reviews",
+										"9"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:13:33 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Feedback By Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review\": \"testupdate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reviews/9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reviews",
+								"9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Update Feedback By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"review\": \"testupdate\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reviews/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reviews",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:12:45 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Updated data amount 1\"\n}"
+						},
+						{
+							"name": "Failed Update Feedback By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"review\": \"testupdate\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reviews/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reviews",
+										"9"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:13:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"could not update the feedback, please try again after sometime\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Feedback By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review\": \"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reviews/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Delete Feedback By Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"review\": \"test123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reviews/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reviews",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:14:49 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted data amount 1\"\n}"
+						},
+						{
+							"name": "Failed Delete Feedback By Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"review\": \"test123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/reviews/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reviews",
+										"9"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:15:09 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"could not delete the feedback, there might be no data for ID 9\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Payment Type",
+			"item": [
+				{
+					"name": "Add PaymentType",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/paymentType",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"paymentType"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add PaymentType",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/paymentType",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"paymentType"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 23:29:33 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "108"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"test\",\n    \"created_at\": \"2022-12-15T23:29:33.577449Z\",\n    \"updated_at\": \"2022-12-15T23:29:33.577449Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All PaymentTypes",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get All PaymentTypes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/paymentType",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"paymentType"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 23:30:07 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "110"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"test\",\n        \"created_at\": \"2022-12-15T23:29:33.577449Z\",\n        \"updated_at\": \"2022-12-15T23:29:33.577449Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get PaymentType By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get PaymentType By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/paymentType/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"paymentType",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 23:30:34 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "108"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"test\",\n    \"created_at\": \"2022-12-15T23:29:33.577449Z\",\n    \"updated_at\": \"2022-12-15T23:29:33.577449Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update PaymentType By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/paymentType/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"paymentType",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update PaymentType By Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"test update\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/paymentType/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"paymentType",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 23:31:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Updated data amount 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete PaymentType By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/paymentType/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"paymentType",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete PaymentType By Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/paymentType/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"paymentType",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Dec 2022 23:32:15 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted data amount 1\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Add Cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cart_product\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Add Cart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cart_product\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/cart",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 02:47:06 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "333"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"cart_product\": [\n        {\n            \"id\": 1,\n            \"product_id\": 1,\n            \"quantity\": 1,\n            \"total_price\": 2000,\n            \"cart_id\": 1,\n            \"created_at\": \"2022-12-16T02:47:04.771053Z\",\n            \"updated_at\": \"2022-12-16T02:47:04.771053Z\"\n        },\n        {\n            \"id\": 2,\n            \"product_id\": 2,\n            \"quantity\": 1,\n            \"total_price\": 1000,\n            \"cart_id\": 1,\n            \"created_at\": \"2022-12-16T02:47:05.840566Z\",\n            \"updated_at\": \"2022-12-16T02:47:05.840566Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Failed Add Cart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cart_product\": [\r\n        {\r\n            \"product_id\": 100,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/cart",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 02:50:19 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"product_id is not valid\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Customer's Cart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/cart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get Customer's Cart",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/cart",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:06:16 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "983"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cart_id\": 4,\n    \"cart_product\": [\n        {\n            \"id\": 5,\n            \"product\": {\n                \"id\": 1,\n                \"name\": \"Capasitor Elektrolit\",\n                \"price\": 2000,\n                \"stock_product\": 5,\n                \"image_url\": \"https://i0.wp.com/ecs7.tokopedia.net/img/product-1/2015/5/8/12331927/12331927_54518ac4-f566-11e4-92cc-fa3d87772fba.jpg?resize=407%2C257&ssl=1\",\n                \"created_at\": \"2022-12-15T08:25:07.137383Z\",\n                \"updated_at\": \"2022-12-15T08:25:07.137383Z\",\n                \"category_id\": 1,\n                \"supplier_id\": 1\n            },\n            \"quantity\": 2,\n            \"total_price\": 4000,\n            \"cart_id\": 4,\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        },\n        {\n            \"id\": 6,\n            \"product\": {\n                \"id\": 2,\n                \"name\": \"Capasitor Mika\",\n                \"price\": 1000,\n                \"stock_product\": 5,\n                \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\n                \"created_at\": \"2022-12-15T08:27:30.757208Z\",\n                \"updated_at\": \"2022-12-15T08:27:30.757208Z\",\n                \"category_id\": 1,\n                \"supplier_id\": 1\n            },\n            \"quantity\": 2,\n            \"total_price\": 2000,\n            \"cart_id\": 4,\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Customer's Cart",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": 1,\r\n    \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cart/?cartId=1&cartProductId=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cart",
+								""
+							],
+							"query": [
+								{
+									"key": "cartId",
+									"value": "1"
+								},
+								{
+									"key": "cartProductId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Update Customer's Cart",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": 1,\r\n    \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/cart/?cartId=1&cartProductId=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cart",
+										""
+									],
+									"query": [
+										{
+											"key": "cartId",
+											"value": "1"
+										},
+										{
+											"key": "cartProductId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:05:42 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Updated data amount 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Cart Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": 1,\r\n    \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cart/?cartId=4&cartProductId=6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cart",
+								""
+							],
+							"query": [
+								{
+									"key": "cartId",
+									"value": "4"
+								},
+								{
+									"key": "cartProductId",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Cart Product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\": 1,\r\n    \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/cart/?cartId=4&cartProductId=6",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cart",
+										""
+									],
+									"query": [
+										{
+											"key": "cartId",
+											"value": "4"
+										},
+										{
+											"key": "cartProductId",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:11:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted data amount 1\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Add Transaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"payment_type\": 2,\r\n    \"courier_company\": \"JNE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/transactions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Add Transaction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"payment_type\": 2,\r\n    \"courier_company\": \"JNE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:40:26 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1365"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"tx_id\": 3,\n    \"order\": [\n        {\n            \"id\": 5,\n            \"product\": {\n                \"id\": 1,\n                \"name\": \"Capasitor Elektrolit\",\n                \"price\": 2000,\n                \"stock_product\": 5,\n                \"image_url\": \"https://i0.wp.com/ecs7.tokopedia.net/img/product-1/2015/5/8/12331927/12331927_54518ac4-f566-11e4-92cc-fa3d87772fba.jpg?resize=407%2C257&ssl=1\",\n                \"created_at\": \"2022-12-15T08:25:07.137383Z\",\n                \"updated_at\": \"2022-12-15T08:25:07.137383Z\",\n                \"category_id\": 1,\n                \"supplier_id\": 1\n            },\n            \"quantity\": 1,\n            \"total_price\": 2000,\n            \"transactions_id\": 3,\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        },\n        {\n            \"id\": 6,\n            \"product\": {\n                \"id\": 2,\n                \"name\": \"Capasitor Mika\",\n                \"price\": 1000,\n                \"stock_product\": 5,\n                \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\n                \"created_at\": \"2022-12-15T08:27:30.757208Z\",\n                \"updated_at\": \"2022-12-15T08:27:30.757208Z\",\n                \"category_id\": 1,\n                \"supplier_id\": 1\n            },\n            \"quantity\": 1,\n            \"total_price\": 1000,\n            \"transactions_id\": 3,\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        }\n    ],\n    \"payment\": {\n        \"id\": 1,\n        \"payment_type_id\": \"2\",\n        \"payment_status\": \"NOT_PAID\",\n        \"total_payment\": 3000,\n        \"transactions_id\": 3,\n        \"created_at\": \"2022-12-16T09:40:26.544479Z\",\n        \"updated_at\": \"2022-12-16T09:40:26.544479Z\"\n    },\n    \"delivery\": {\n        \"id\": 3,\n        \"courier_company\": \"JNE\",\n        \"status_delivery\": \"PREPARED\",\n        \"created_at\": \"2022-12-16T09:40:24.544615Z\",\n        \"updated_at\": \"2022-12-16T09:40:24.544615Z\",\n        \"transactions_id\": 3\n    }\n}"
+						},
+						{
+							"name": "Failed Add Transaction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"payment_type\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transactions"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:43:30 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"courier_company is required\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Transaction By TxId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{userToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/transaction/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get Transaction By TxId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/transaction/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:45:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1365"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"tx_id\": 3,\n    \"order\": [\n        {\n            \"id\": 5,\n            \"product\": {\n                \"id\": 1,\n                \"name\": \"Capasitor Elektrolit\",\n                \"price\": 2000,\n                \"stock_product\": 5,\n                \"image_url\": \"https://i0.wp.com/ecs7.tokopedia.net/img/product-1/2015/5/8/12331927/12331927_54518ac4-f566-11e4-92cc-fa3d87772fba.jpg?resize=407%2C257&ssl=1\",\n                \"created_at\": \"2022-12-15T08:25:07.137383Z\",\n                \"updated_at\": \"2022-12-15T08:25:07.137383Z\",\n                \"category_id\": 1,\n                \"supplier_id\": 1\n            },\n            \"quantity\": 1,\n            \"total_price\": 2000,\n            \"transactions_id\": 3,\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        },\n        {\n            \"id\": 6,\n            \"product\": {\n                \"id\": 2,\n                \"name\": \"Capasitor Mika\",\n                \"price\": 1000,\n                \"stock_product\": 5,\n                \"image_url\": \"https://4.bp.blogspot.com/-dsNY3gxwFNk/XXRuyJYJILI/AAAAAAAADrU/J-YTywAVFIsTxyGOa_k1Q8N1-RhplVXrgCK4BGAYYCw/s320/Gambar-Kapasitor-Mika.png\",\n                \"created_at\": \"2022-12-15T08:27:30.757208Z\",\n                \"updated_at\": \"2022-12-15T08:27:30.757208Z\",\n                \"category_id\": 1,\n                \"supplier_id\": 1\n            },\n            \"quantity\": 1,\n            \"total_price\": 1000,\n            \"transactions_id\": 3,\n            \"created_at\": \"0001-01-01T00:00:00Z\",\n            \"updated_at\": \"0001-01-01T00:00:00Z\"\n        }\n    ],\n    \"payment\": {\n        \"id\": 1,\n        \"payment_type_id\": \"2\",\n        \"payment_status\": \"NOT_PAID\",\n        \"total_payment\": 3000,\n        \"transactions_id\": 3,\n        \"created_at\": \"2022-12-16T09:40:26.544479Z\",\n        \"updated_at\": \"2022-12-16T09:40:26.544479Z\"\n    },\n    \"delivery\": {\n        \"id\": 3,\n        \"courier_company\": \"JNE\",\n        \"status_delivery\": \"PREPARED\",\n        \"created_at\": \"2022-12-16T09:40:24.544615Z\",\n        \"updated_at\": \"2022-12-16T09:40:24.544615Z\",\n        \"transactions_id\": 3\n    }\n}"
+						},
+						{
+							"name": "Failed Get Transaction By TxId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{userToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/transaction/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transaction",
+										"9"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 16 Dec 2022 09:45:59 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {}\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
