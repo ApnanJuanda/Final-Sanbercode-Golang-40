@@ -64,11 +64,11 @@ func CustomerPopulator(customerRegister *model.CustomerRegister) (*model.Custome
 	}
 
 	return &model.Customer{
-		Name:     customerRegister.Name,
-		Email:    customerRegister.Email,
-		Password: string(hash),
+		Name:        customerRegister.Name,
+		Email:       customerRegister.Email,
+		Password:    string(hash),
 		PhoneNumber: customerRegister.PhoneNumber,
-		Address: customerRegister.Address,
+		Address:     customerRegister.Address,
 	}, nil
 }
 
@@ -79,8 +79,8 @@ func FeedbackPopulator(addFeedback *model.AddFeedback, customerId int) (*model.F
 
 	return &model.Feedback{
 		CustomerId: customerId,
-		ProductId: addFeedback.ProductId,
-		Review: addFeedback.Review,
+		ProductId:  addFeedback.ProductId,
+		Review:     addFeedback.Review,
 	}, nil
 }
 
@@ -90,6 +90,6 @@ func CartProductPopulator(addCartProduct *model.AddCartProduct) (*model.CartProd
 	}
 	return &model.CartProduct{
 		ProductId: addCartProduct.ProductId,
-		Quantity: addCartProduct.Quantity,
+		Quantity:  addCartProduct.Quantity,
 	}, nil
 }

@@ -55,6 +55,7 @@ func main() {
 	customerService := service.NewCustomerService(DB)
 	customerController := controller.NewCustomerController(customerService)
 	router.POST("customer/register", customerController.RegisterCustomer)
+	router.GET("customer/verifyemail/:code", customerController.VerifyCustomer)
 	router.POST("customer/login", customerController.LoginCustomer)
 	router.PUT("customer/update", customerController.UpdateCustomer)
 	router.DELETE("customer/delete/:id", customerController.DeleteCustomer)

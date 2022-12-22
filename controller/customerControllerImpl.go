@@ -55,8 +55,8 @@ func (cc *CustomerControllerImpl) LoginCustomer(ctx *gin.Context) {
 	}
 	ctx.JSON(http.StatusOK, gin.H{
 		"token": token,
-	})	
-	
+	})
+
 }
 
 func (cc *CustomerControllerImpl) UpdateCustomer(ctx *gin.Context) {
@@ -73,7 +73,6 @@ func (cc *CustomerControllerImpl) UpdateCustomer(ctx *gin.Context) {
 		return
 	}
 
-	
 	count, err := cc.customerService.UpdateCustomer(customerId.(int), &customerRegister)
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{
@@ -108,4 +107,16 @@ func (cc *CustomerControllerImpl) DeleteCustomer(ctx *gin.Context) {
 	})
 }
 
-
+func (cc *CustomerControllerImpl) VerifyCustomer(ctx *gin.Context) {
+	code := ctx.Param("code")
+	verifyEmailMessage, err := cc.customerService.VerifyCustomer(code)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{
+			"message": err.Error(),
+		})
+		return
+	}
+	ctx.JSON(http.StatusOK, gin.H{
+		"message": verifyEmailMessage,
+	})
+}
